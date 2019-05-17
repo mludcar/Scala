@@ -1,0 +1,29 @@
+
+
+			document.domain = 'livescore.in';
+
+	custom_enable = true;sentences = [];sentences_parts = [];hover_color = null;iframe_external = false;default_tz = 2;matches = null;mid_s = 2;mpe_alias = 'p1:100, p2:100, p3:100, p4:100, p5:100, p6:100, p7:100, p8:100, p9:100, p10:100';mpe_debug = false;mpe_delivery = 'p';mpr = 18;odds_enable = true;mixed_feed = false;project_id = 61;check_lang_box_geo_ip = ["BG","CZ","DK","DE","CH","AT","GR","FI","FR","HR","MK","BA","ME","HU","ID","IT","KP","KR","LT","MY","NL","NO","PL","PT","BR","RO","RU","SK","SI","RS","SE","TR","VN"];sport_sort = {"s1":0,"s2":1,"s3":2,"s4":3,"s6":4,"s5":5,"s7":6,"s12":7,"s8":8,"s13":9};prev_category = null;prev_date = null;push_fail_logging = false;refresh_serial = 0;sport = 'tennis';stats_enable = true;tudate = 1536624000;cjs.cfg.fs_stats_enable = true;cjs.cfg.fs_stats_url_mygames = 'remote-stats.flashscore.com/mg';cjs.cfg.fs_stats_url_inscore = 'remote-stats.flashscore.com/in';cjs.cfg.fs_stats_url_adblocked = '';stats_live_enable = 0;country_id = 0;tournament_id = 0;series_id = 0;participant_id = 0;
+			try {
+				matches = /^([^#]+)#(.*)\breload:([0-9]+)\-([0-9])(.*)$/.exec(parent.location.href);
+			} catch (e) {}
+
+			if(matches)
+			{
+				prev_date = matches[3];
+				prev_category = matches[4];
+				// cut out reload message from url bookmark
+				parent.location.href = matches[1] + "#" +
+					(matches[2].substr(matches[2].length - 1) == ";" ? matches[2].substr(0, matches[2].length - 1) : matches[2]) +
+					((matches[5].substr(0, 1) == ";" && !matches[2].length) ? matches[5].substr(1) : matches[5]);
+			}
+
+				var startUpdater = true;
+
+						videoHighlightsDisabledTournamentTemplates = [];
+
+			init('tennis', 0, '0', true, null, null, startUpdater, '0', '0');
+			cjs.pageType = 'sport_page';
+            cjs.bookmakersData = {"default":[{"main_bookmaker_id":"16","project_id":"61","geo_ip":"default","name":"bet365"},{"main_bookmaker_id":"15","project_id":"61","geo_ip":"default","name":"William Hill"},{"main_bookmaker_id":"406","project_id":"61","geo_ip":"default","name":"Sportium"},{"main_bookmaker_id":"392","project_id":"61","geo_ip":"default","name":"bwin.es"}]};
+			cjs.bookmakerLogos = {"url":"\/es\/res\/image\/data\/m-ddxzWOqT-dbViWN3Q.png?bookmaker","offsets":{"1":0,"15":21,"16":42,"392":63,"406":84,"429":105}};
+			cjs.dic.get('application').setExternalProjectId(0);
+
